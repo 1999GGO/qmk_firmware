@@ -15,12 +15,12 @@
 #define MATRIX_COLS 8
 
 /* key matrix pins */
-#define MATRIX_ROW_PINS { B0, B1, B2, B3, B4, B5, B6, B7, C0, C1 }
-#define MATRIX_COL_PINS { C2, C3, C4, C5, C6, C7, D0, D1 }
+#define MATRIX_ROW_PINS { F5, F6, F7, B1, B3, B2, B6, F0, C7, F1 }
+#define MATRIX_COL_PINS { D5, B7, B5, B4, E6, D7, C6, D4 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
 /* number of backlight levels */
 /*
@@ -46,3 +46,9 @@
 #define PREVENT_STUCK_MODIFIERS
 
 #define FORCE_NKRO
+
+#ifdef OLED_DRIVER_ENABLE
+#    define OLED_DISPLAY_64x128
+#    define OLED_TIMEOUT 60000
+#   define OLED_FONT_H "keyboards/handwired/caparrut70/glcdfont.c"
+#endif
